@@ -9,6 +9,7 @@ __pycache__/
 # personal
 /logs
 
+
 # Distribution / packaging
 .Python
 build/
