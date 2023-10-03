@@ -3,7 +3,10 @@ pandas
 seaborn
 matplotlib
 scikit-learn
+ipykernel
 python-dotenv
 flask
 pymongo
+xgboost
+catboost
 #-e .
