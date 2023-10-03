@@ -26,6 +26,7 @@ class DataIngestion:
             logging.info('Reading Data From Mongodb')
             df = read_data_from_mongo()
 
+            df.drop(['id'],axis = 1,inplace=True)
             df.to_csv(self.data_ingestion_config.raw_data_path,header = True,index=False)
 
             (train_data,test_data) = train_test_split(df,test_size=0.3,random_state=45,shuffle=True)
