@@ -13,7 +13,6 @@ if __name__ == "__main__":
 
         data_ingestion = DataIngestion()
         (train_data_path,test_data_path) = data_ingestion.initiate_data_injestion()
-
         logging.info('Data Injestion has Completed')
         logging.info('-'*35)
 
