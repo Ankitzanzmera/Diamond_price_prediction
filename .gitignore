@@ -10,6 +10,8 @@ __pycache__/
 /logs
 /notebooks/data
 catboost_info/
+mlflow_info
+mlruns/
 
 # Distribution / packaging
 .Python

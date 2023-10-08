@@ -34,6 +34,8 @@ class ModelTrainer:
 
             save_object(self.model_trainer_config.trained_model_path,tuned_model)
 
+            return tuned_model_name,tuned_model,best_params,X_test,y_test
+
 
     except Exception as e:
         raise CustomException(e,sys)

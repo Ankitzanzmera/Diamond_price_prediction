@@ -10,4 +10,6 @@ pymongo
 xgboost
 catboost
 tqdm
+mlflow
+urlib
 #-e .
