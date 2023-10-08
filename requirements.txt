@@ -9,4 +9,5 @@ flask
 pymongo
 xgboost
 catboost
+tqdm
 #-e .

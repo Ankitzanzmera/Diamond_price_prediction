@@ -9,6 +9,7 @@ __pycache__/
 # personal
 /logs
 /notebooks/data
+catboost_info/
 
 # Distribution / packaging
 .Python

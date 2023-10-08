@@ -71,7 +71,6 @@ class DataTransformation:
             target = 'price' 
 
             train_data_input = train_data.drop([target],axis = 1)
-            logging.info(f"{train_data_input.columns}")
             train_data_target = train_data[target]
 
             test_data_input = test_data.drop([target],axis = 1)

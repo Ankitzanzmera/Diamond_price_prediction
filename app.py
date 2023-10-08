@@ -6,6 +6,7 @@ from src.logger import logging
 from src.exception import CustomException
 from src.components.data_ingestion import DataIngestion
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 if __name__ == "__main__":
     try:
@@ -21,6 +22,10 @@ if __name__ == "__main__":
         logging.info('Data Transformation has completed')
         logging.info('-'*35)
 
+        model_trainer = ModelTrainer()
+        model_trainer.initiate_model_training(train_data,test_data)
+        logging.info("Model Training Has Completed")
+        logging.info('-'*35)
 
     except Exception as e:
         raise CustomException(e,sys)
