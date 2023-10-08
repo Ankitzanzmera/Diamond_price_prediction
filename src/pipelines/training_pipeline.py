@@ -33,5 +33,8 @@ if __name__ == "__main__":
         logging.info('Model Monitoring Has Completed')
 
 
+        logging.info("Training Pipeline is completed")
+
+
     except Exception as e:
         raise CustomException(e,sys)
