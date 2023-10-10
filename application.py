@@ -6,7 +6,8 @@ from src.logger import logging
 from src.pipelines.prediction_pipeline import CustomData,PredictionPipeline
 
 
-app = Flask(__name__)
+application = Flask(__name__)
+app = application
 
 @app.route("/")
 def home_page():
