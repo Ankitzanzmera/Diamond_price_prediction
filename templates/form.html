@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+  <form class="form-horizontal" style="margin-top: 50px;" action="{{url_for('predict_datapoint')}}" method="POST">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend class="text-center">Enter All Detail to Predict The Price of Diamond</legend>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="carat">Carat</label>  
+      <div class="col-md-4">
+      <input id="carat" name="carat" type="text" placeholder="Enter a Value for Carat" class="form-control input-md">
+        
+      </div>
+    </div>
+    
+    <!-- Select Basic -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="cut">Cut</label>
+      <div class="col-md-4">
+        <select id="cut" name="cut" class="form-control">
+          <option value="Fair">Fair</option>
+          <option value="Good">Good</option>
+          <option value="Very Good">Very Good</option>
+          <option value="Premium">Premium</option>
+          <option value="Ideal">Ideal</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Select Basic -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="color">Color</label>
+      <div class="col-md-4">
+        <select id="color" name="color" class="form-control">
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+          <option value="H">H</option>
+          <option value="I">I</option>
+          <option value="J">J</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Select Basic -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="clarity">Clarity</label>
+      <div class="col-md-4">
+        <select id="clarity" name="clarity" class="form-control">
+          <option value="I1">I1</option>
+          <option value="SI2">SI2</option>
+          <option value="SI1">SI1</option>
+          <option value="VS2">VS2</option>
+          <option value="VS1">VS1</option>
+          <option value="VVS2">VVS2</option>
+          <option value="VVS1">VVS1</option>
+          <option value="IF">IF</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="depth">Depth</label>  
+      <div class="col-md-4">
+      <input id="depth" name="depth" type="text" placeholder="Enter Value for Depth" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="table">Table</label>  
+      <div class="col-md-4">
+      <input id="table" name="table" type="text" placeholder="Enter Value for Table" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+
+        <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="x">X</label>  
+      <div class="col-md-4">
+      <input id="x" name="x" type="text" placeholder="Enter Value for X" class="form-control input-md" required="">
+        
+      </div>
+    </div>  
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="y">Y</label>  
+      <div class="col-md-4">
+      <input id="y" name="y" type="text" placeholder="Enter Value for Y" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="z">Z</label>  
+      <div class="col-md-4">
+      <input id="z" name="z" type="text" placeholder="Enter Value for Z" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+
+    
+    <!-- Button (Double) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="submit"></label>
+      <div class="col-md-8">
+        <input type="submit" value="Predict" class="btn btn-success">
+        <input type="reset" value="Reset" class=" btn btn-danger">
+      </div>
+    </div>
+    
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="predict">Prediction</label>  
+      <div class="col-md-4">
+      <input id="predict" name="predict" type="text" value="{{final_result}}" placeholder="Prediction Given by Model" class="form-control input-md" disabled>
+        
+      </div>
+    </div>
+    </fieldset>
+    </form>
+
+    <p class="text-center" style="margin-top: 10px;">Thank you</p>
+    <p class="text-center">By : Ankit M Zanzmera</p>
+</body>
+</html>
