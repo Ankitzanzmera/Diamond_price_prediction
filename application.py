@@ -4,6 +4,7 @@ sys.path.append(os.getcwd())
 from flask import Flask,request,render_template,jsonify
 from src.logger import logging
 from src.pipelines.prediction_pipeline import CustomData,PredictionPipeline
+import streamlit as st
 
 
 application = Flask(__name__)

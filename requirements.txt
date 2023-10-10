@@ -11,5 +11,5 @@ xgboost
 catboost
 tqdm
 mlflow
-urlib
+streamlit
 #-e .
